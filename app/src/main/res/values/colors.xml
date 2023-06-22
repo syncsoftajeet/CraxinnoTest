@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryColor">#203B54</color>
+    <color name="sceondryColor">#2B87D8</color>
+    <color name="gray">#BCBCBC</color>
+    <color name="ligth_gray">#E9ECECEC</color>
+    <color name="timeColor">#9A9A9A</color>
+    <color name="shimmerColor">#399A9A9A</color>
+    <color name="backgroundColor">#FAFAFA</color>
+</resources>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:src="@drawable/back_icon"
+        android:layout_margin="@dimen/_15sdp"
+       android:elevation="@dimen/_10sdp"
+        app:tint="@color/white"
+        android:layout_marginStart="@dimen/_5sdp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/agenda_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_80sdp"
+            android:fontFamily="@font/poppins"
+            android:textFontWeight="700"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bannerImage"
+            app:layout_constraintVertical_bias="0.015" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userRecyclerview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/agenda_title"
+            app:layout_constraintTop_toBottomOf="@+id/agenda_title"
+            tools:itemCount="6"
+          />
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/location_marker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/userRecyclerview"
+            app:layout_constraintTop_toBottomOf="@+id/userRecyclerview"
+            app:layout_constraintVertical_bias="0.01"
+            app:tint="@color/sceondryColor" />
+
+        <TextView
+            android:id="@+id/month_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:textFontWeight="600"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_minus2sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/month_date"
+            app:layout_constraintTop_toBottomOf="@+id/month_date" />
+
+
+        <ImageView
+            android:id="@+id/calender"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/calendar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/time"
+            app:layout_constraintVertical_bias="0.01"
+            app:tint="@color/sceondryColor" />
+
+
+        <TextView
+            android:id="@+id/mlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+
+            android:textFontWeight="600"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/calender"
+            app:layout_constraintTop_toTopOf="@+id/calender" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_minus2sdp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/mlocation"
+            app:layout_constraintTop_toBottomOf="@+id/mlocation" />
+
+
+        <Button
+            android:id="@+id/enterCode"
+            style="@style/button_style"
+            android:layout_width="160dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            android:text="Enter Code"
+            android:textFontWeight="700"
+            app:layout_constraintEnd_toStartOf="@+id/takeSevay"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Button
+            android:id="@+id/takeSevay"
+            style="@style/button_style"
+            android:layout_width="160dp"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:text="Take Survey"
+            android:textFontWeight="700"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/enterCode"
+            app:layout_constraintTop_toTopOf="@+id/enterCode" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/poppins"
+            android:text="Speakers"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="@+id/calender"
+            app:layout_constraintTop_toBottomOf="@+id/enterCode" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/speakerRecyclerview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            tools:listitem="@layout/speakers_itesm" />
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/poppins"
+            android:text="Registration Links"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/speakerRecyclerview" />
+
+
+        <Button
+            android:id="@+id/registrationlinkButton"
+            style="@style/button_style"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:text="Craxinno Technologies"
+            android:textFontWeight="700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+        <TextView
+            android:id="@+id/documenttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/poppins"
+            android:text="Documents"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/registrationlinkButton" />
+
+
+        <Button
+            android:id="@+id/documentlinkButton"
+            style="@style/button_style"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:text="Feature List (DOC)"
+            android:textFontWeight="700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/documenttext"
+            app:layout_constraintTop_toBottomOf="@+id/documenttext" />
+
+        <TextView
+            android:id="@+id/descriptiontext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/poppins"
+            android:text="Description"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="@+id/documenttext"
+            app:layout_constraintTop_toBottomOf="@+id/documentlinkButton" />
+
+
+        <WebView
+            android:id="@+id/description_webview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@+id/documentlinkButton"
+            app:layout_constraintStart_toStartOf="@+id/descriptiontext"
+            app:layout_constraintTop_toBottomOf="@+id/descriptiontext" />
+
+
+        <TextView
+            android:id="@+id/sponser_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:fontFamily="@font/poppins"
+            android:text="Sponser Name"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="@+id/descriptiontext"
+            app:layout_constraintTop_toBottomOf="@+id/description_webview" />
+
+
+        <ImageView
+            android:id="@+id/sponserImage"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sponser_name" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/progresslayout"
+        layout="@layout/progress_layout"
+        android:visibility="gone"
+        />
+</FrameLayout>

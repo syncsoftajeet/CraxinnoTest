@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:strokeWidth="@dimen/_1sdp"
+    android:layout_marginEnd="@dimen/_minus10sdp"
+
+    android:layout_marginTop="@dimen/_10sdp"
+    app:strokeColor="@color/gray"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/agenda_name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="@font/gilory"
+            android:textSize="17sp"
+            android:background="@color/shimmerColor"
+            android:textFontWeight="700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.17000002" />
+
+
+        <TextView
+            android:id="@+id/start_end_time"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@color/shimmerColor"
+            android:textColor="@color/timeColor"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/agenda_name"
+            app:layout_constraintTop_toBottomOf="@+id/agenda_name" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/round_shape"
+            app:cardBackgroundColor="@color/shimmerColor"
+            app:cardCornerRadius="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/start_end_time"
+            app:layout_constraintTop_toBottomOf="@+id/start_end_time" />
+
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:background="@drawable/round_shape"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   android:background="@drawable/custom_background"
+    android:layout_marginTop="@dimen/_10sdp"
+
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/agenda_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_22sdp"
+            android:fontFamily="@font/gilory"
+            android:text="@string/northwest_florid_nreception_sponsored_by_nbeggs_lane_rllp"
+            android:textSize="17sp"
+            android:textFontWeight="700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.17000002" />
+
+
+        <TextView
+            android:id="@+id/start_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="01:15 pm - 02:15 pm EST"
+            android:textColor="@color/timeColor"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/agenda_name"
+            app:layout_constraintTop_toBottomOf="@+id/agenda_name" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userRecyclerview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/agenda_name"
+            app:layout_constraintStart_toStartOf="@+id/start_end_time"
+            app:layout_constraintTop_toBottomOf="@+id/start_end_time"
+            tools:itemCount="6"
+            android:layout_marginBottom="@dimen/_7sdp"
+            tools:listitem="@layout/user_items" />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
